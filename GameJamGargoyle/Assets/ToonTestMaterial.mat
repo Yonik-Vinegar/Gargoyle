@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: ToonTestMaterial
   m_Shader: {fileID: -6465566751694194690, guid: c7aec09384f0274409779f55034edc31,
     type: 3}
   m_Parent: {fileID: 0}

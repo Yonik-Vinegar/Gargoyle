@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pixel
+  m_Name: PosterisationController
   m_Shader: {fileID: -6465566751694194690, guid: 071d471d92387424fb4f77217352b3cc,
     type: 3}
   m_Parent: {fileID: -876546973899608171, guid: 071d471d92387424fb4f77217352b3cc,
