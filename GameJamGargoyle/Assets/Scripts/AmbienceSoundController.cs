@@ -29,7 +29,7 @@ public class SoundController : MonoBehaviour
                 waitTimeCountdown = Random.Range(minWaitBetweenPlays, maxWaitBetweenPlays);
                 transform.position = player.transform.position + new Vector3(Random.Range(-10,10),0,Random.Range(-10,10));
             }
-            else
+            else if (GargoyleScript.isSeen == false)
             {
                 waitTimeCountdown -= Time.deltaTime;
             }
