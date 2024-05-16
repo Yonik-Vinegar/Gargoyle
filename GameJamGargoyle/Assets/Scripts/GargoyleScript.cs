@@ -5,6 +5,7 @@ using UnityEngine;
 public class GargoyleScript : MonoBehaviour
 {
     public GameObject gargoyle;
+    static public bool isSeen;
     Renderer gargoyleRenderer;
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,10 @@ public class GargoyleScript : MonoBehaviour
             RaycastHit distance;
             if (Physics.Raycast(transform.position, (transform.position - gargoyle.transform.position), out distance, 17f))
             {
-                Debug.Log("Object is visible");
+                isSeen = true;
             }
-            else {Debug.Log("Object is no longer visible");}
+            else isSeen = false;
         }
-        else Debug.Log("Object is no longer visible");
+        else isSeen = false;
     }
 }
