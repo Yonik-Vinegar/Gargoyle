@@ -7,6 +7,7 @@ public class GargoyleScript : MonoBehaviour
     public GameObject gargoyle;
     static public bool isSeen;
     Renderer gargoyleRenderer;
+    int layerMask = 1 << 7;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class GargoyleScript : MonoBehaviour
         if (gargoyleRenderer.isVisible)
         {
             RaycastHit distance;
-            if (Physics.Raycast(transform.position, (transform.position - gargoyle.transform.position), out distance, 14f))
+            if (Physics.Raycast(transform.position, (gargoyle.transform.position - transform.position), out distance, 7f, layerMask))
             {
                 isSeen = true;
             }
