@@ -8,6 +8,8 @@ public class GargoyleScareSound : MonoBehaviour
     public List<AudioClip> stopClip;
     public AudioSource sourceScare;
     public AudioSource sourceStop;
+    public AudioSource sourceStatic1;
+    public AudioSource sourceStatic2;
     public float cooldownTime = 1f;
     public float cooldownTicker = -1f;
     private bool playStop = false;
@@ -19,8 +21,15 @@ public class GargoyleScareSound : MonoBehaviour
             sourceStop.clip = stopClip[Random.Range(0, stopClip.Count)];
             sourceStop.Play();
             playStop = false;
+            sourceStatic1.Play();
+            sourceStatic2.Play();
         }
-        if (!GargoyleScript.isSeen) { playStop = true; }
+        if (!GargoyleScript.isSeen) 
+        { 
+            playStop = true; 
+            sourceStatic1.Stop();
+            sourceStatic2.Stop();
+        }
         /* if (!sourceScare.isPlaying) 
         {
             if (cooldownTicker < 0f && GargoyleScript.isSeen)

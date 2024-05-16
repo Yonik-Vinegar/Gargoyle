@@ -39,7 +39,7 @@ public class GargoyleScript : MonoBehaviour
         if (gargoyleRenderer.isVisible)
         {
             RaycastHit distance;
-            if (Physics.Raycast(transform.position, (gargoyle.transform.parent.position - transform.position), out distance, 12f, layerMask))
+            if (Physics.Raycast(transform.position, (gargoyle.transform.parent.position - transform.position), out distance, 7.5f, layerMask))
             {
                 isSeen = true;
             }
