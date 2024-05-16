@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GargoyleScript : MonoBehaviour
@@ -33,6 +34,7 @@ public class GargoyleScript : MonoBehaviour
                 currentColour.g = 255f;
                 currentColour.b = 255f;
             }
+            if (currentColour.a == 255) { SceneManager.LoadScene("Menu"); }
         }
         if (gargoyleRenderer.isVisible)
         {
