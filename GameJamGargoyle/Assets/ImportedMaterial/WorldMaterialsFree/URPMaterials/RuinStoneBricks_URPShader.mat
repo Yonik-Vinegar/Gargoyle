@@ -111,7 +111,7 @@ Material:
     - _SrcBlend: 1
     - _TessMax: 25
     - _TessMin: 10
-    - _TessValue: 16
+    - _TessValue: 13.2
     - _Tile: 10
     - _UVSec: 0
     - _ZWrite: 1
