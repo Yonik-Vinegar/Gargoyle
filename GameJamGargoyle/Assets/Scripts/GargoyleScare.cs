@@ -14,14 +14,14 @@ public class GargoyleScareSound : MonoBehaviour
 
     void Update()
     {
-        if (/*!sourceStop.isPlaying && */playStop && GargoyleScript.isSeen)
+        if (playStop && GargoyleScript.isSeen)
         {
             sourceStop.clip = stopClip[Random.Range(0, stopClip.Count)];
             sourceStop.Play();
             playStop = false;
         }
         if (!GargoyleScript.isSeen) { playStop = true; }
-        /* if (!sourceScare.isPlaying) 
+        if (!sourceScare.isPlaying) 
         {
             if (cooldownTicker < 0f && GargoyleScript.isSeen)
             {
@@ -38,6 +38,6 @@ public class GargoyleScareSound : MonoBehaviour
                 sourceScare.volume = sourceScare.volume - Time.deltaTime;
             }
             if (sourceScare.volume < 0f) { sourceScare.Stop(); }
-        } */
+        }
     }
 }
