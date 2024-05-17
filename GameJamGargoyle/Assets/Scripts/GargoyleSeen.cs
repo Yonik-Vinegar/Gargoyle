@@ -10,7 +10,7 @@ public class GargoyleScript : MonoBehaviour
     public bool die = false;
     public Image gameOver;
     Color currentColour;
-    static public bool isSeen;
+    static public bool isSeen = false;
     //Renderer gargoyleRenderer;
     //MeshRenderer gargoyleRenderer;
     SkinnedMeshRenderer gargoyleRenderer;
@@ -49,7 +49,7 @@ public class GargoyleScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Gargoyle")
+        if (collision.gameObject.tag == "Gargoyle" && !GargoyleScript.isSeen)
         {
             die = true;
         }
