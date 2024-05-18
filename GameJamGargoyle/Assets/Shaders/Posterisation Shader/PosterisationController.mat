@@ -27,7 +27,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Effect_Multiplier: 6
+    - _Effect_Multiplier: 11
     - _Effect_On_Off: 1
     - _Pixel_Size: 1
     m_Colors: []
